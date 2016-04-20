@@ -1,5 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <head>
+  <base href="<?php echo $this->config->base_url(); ?>">
   <title>
     <?php if (!empty($head_title)): ?>
       <?php print $head_title; ?> | Test Site
