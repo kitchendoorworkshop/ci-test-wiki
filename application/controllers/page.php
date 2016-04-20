@@ -58,6 +58,8 @@ class Page extends CI_Controller {
 
 	public function add($slug = NULL) {
 
+		$data['slug'] = $slug;
+
 		// load codeigntiter form helpers
 		$this->load->helper('form');
 		$this->load->library('form_validation');
