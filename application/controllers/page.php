@@ -40,7 +40,7 @@ class Page extends CI_Controller {
 				show_404();
 			}
 		} else {
-			$data['show_edit_links'];
+			$data['show_edit_links'] = TRUE;
 		}
 
 	    if ($slug == 'home') {
