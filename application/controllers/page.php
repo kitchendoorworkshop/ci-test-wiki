@@ -32,7 +32,15 @@ class Page extends CI_Controller {
 		$data['page'] = $this->page_model->get_page($slug);
 
 		if (!$data['page']) {
-			show_404();
+			if ($slug == 'home') {
+				$data['page']['title'] = 'No home page defined';
+				$data['page']['content'] = '<p>Please <a href="page/add/home">create a home page</a>!</p>';
+				$data['show_edit_links'] = FALSE;
+			} else {
+				show_404();
+			}
+		} else {
+			$data['show_edit_links'];
 		}
 
 	    if ($slug == 'home') {
