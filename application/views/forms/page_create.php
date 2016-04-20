@@ -1,6 +1,10 @@
 <?php echo validation_errors(); ?>
 
-<?php echo form_open('page/add') ?>
+<?php if ($slug): ?>
+	<?php echo form_open('page/add/'.$slug); ?>
+<?php else: ?>
+	<?php echo form_open('page/add'); ?>
+<?php endif; ?>
 
 	<label for="title">Title</label>
 	<input type="input" name="title" /><br />

@@ -30,14 +30,16 @@ class Page_model extends CI_Model {
   }
 
 	// function to add a page to the DB
-	public function add_page()
+	public function add_page($slug = NULL)
 	{
 		$this->load->helper('url');
 
 		// for checking url slugs are unique
 		$extra_slug = 0;
 		do {
-			$slug = url_title($this->input->post('title'), 'dash', TRUE);
+			if (!$slug) {
+				$slug = url_title($this->input->post('title'), 'dash', TRUE);
+			}
 			if ($extra_slug > 0) {
 				$slug .= '-'.$extra_slug;
 			}

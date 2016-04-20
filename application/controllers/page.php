@@ -80,7 +80,8 @@ class Page extends CI_Controller {
 		}
 		else
 		{
-			$page_data = $this->page_model->add_page();
+			$form_slug = $this->input->post('slug');
+			$page_data = $this->page_model->add_page($form_slug);
 			redirect($page_data['slug'], 'location');
 		}
 	}
