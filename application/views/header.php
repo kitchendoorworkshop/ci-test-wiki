@@ -1,5 +1,6 @@
 <!doctype html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     <?php if (!empty($head_title)): ?>
       <?php print $head_title; ?> | Test Site
