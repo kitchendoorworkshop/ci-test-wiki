@@ -14,6 +14,6 @@
   <div class="wrapper">
 
     <header>
-      <h1>Test Site</h1>
+      <h1>Test Wiki</h1>
       <h2><?php print $page_title; ?></h2>
     </header>
