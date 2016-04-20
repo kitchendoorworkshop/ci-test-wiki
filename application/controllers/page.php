@@ -7,6 +7,9 @@ class Page extends CI_Controller {
 		parent::__construct();
 		// load up access page info
 		$this->load->model('page_model');
+
+		// make sure url helper is loaded
+		$this->load->helper('url');
 	}
 
 	// function to view all pages
@@ -147,7 +150,7 @@ class Page extends CI_Controller {
 			$this->load->view('footer', $data);
 		} else {
 			$this->page_model->delete_page($data['page']['id']);
-			redirect('home', 'location');
+			redirect('/', 'location');
 		}
 
 	}
