@@ -38,7 +38,6 @@
 |
 */
 
-$route['test'] = "Test";
 $route['pages'] = 'page';
 $route['page/add'] = 'page/add';
 $route['page/add/(:any)'] = 'page/add/$1';
