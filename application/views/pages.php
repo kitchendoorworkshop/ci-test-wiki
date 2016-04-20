@@ -6,5 +6,5 @@
   </ul>
 </div>
 <div id="functions">
-  <a href="/page/add">Add a new page</a>
+  <a href="page/add">Add a new page</a>
 </div>
