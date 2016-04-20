@@ -17,8 +17,8 @@ class Page extends CI_Controller {
 		$data['page_title'] = 'All Pages';
 
 		// output page
-    $this->load->view('header', $data);
-    $this->load->view('pages', $data);
+    	$this->load->view('header', $data);
+    	$this->load->view('pages', $data);
 		$this->load->view('footer', $data);
 	}
 
@@ -26,7 +26,7 @@ class Page extends CI_Controller {
 	public function view($slug = 'home')
 	{
 
-    //set data variables
+	    //set data variables
 
 		// fetch the page data
 		$data['page'] = $this->page_model->get_page($slug);
@@ -35,20 +35,20 @@ class Page extends CI_Controller {
 			show_404();
 		}
 
-    if ($slug == 'home') {
-      $data['head_title'] = NULL;
-    } else {
-      $data['head_title'] = ucfirst($data['page']['title']);
-    }
+	    if ($slug == 'home') {
+	      $data['head_title'] = NULL;
+	    } else {
+	      $data['head_title'] = ucfirst($data['page']['title']);
+	    }
 		$data['page_title'] = $data['page']['title'];
 
-    // output page
-    $this->load->view('header', $data);
-    $this->load->view('page', $data);
+	    // output page
+	    $this->load->view('header', $data);
+	    $this->load->view('page', $data);
 		$this->load->view('footer', $data);
 	}
 
-	public function add() {
+	public function add($slug = NULL) {
 
 		// load codeigntiter form helpers
 		$this->load->helper('form');
@@ -63,8 +63,8 @@ class Page extends CI_Controller {
 		if ($this->form_validation->run() === FALSE)
 		{
 			// output page
-	    $this->load->view('header', $data);
-	    $this->load->view('forms/page_create', $data);
+	    	$this->load->view('header', $data);
+	    	$this->load->view('forms/page_create', $data);
 			$this->load->view('footer', $data);
 
 		}
@@ -97,8 +97,8 @@ class Page extends CI_Controller {
 		if ($this->form_validation->run() === FALSE)
 		{
 			// output page
-	    $this->load->view('header', $data);
-	    $this->load->view('forms/page_edit', $data);
+	    	$this->load->view('header', $data);
+	    	$this->load->view('forms/page_edit', $data);
 			$this->load->view('footer', $data);
 		}
 		else
@@ -131,8 +131,8 @@ class Page extends CI_Controller {
 		if (!isset($_POST['delete']))
 		{
 			// output page
-	    $this->load->view('header', $data);
-	    $this->load->view('forms/page_delete', $data);
+			$this->load->view('header', $data);
+	    	$this->load->view('forms/page_delete', $data);
 			$this->load->view('footer', $data);
 		} else {
 			$this->page_model->delete_page($data['page']['id']);
