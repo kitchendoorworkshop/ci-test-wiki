@@ -1,5 +1,5 @@
     <footer>
-      <p>Footer Info</p>
+      <p>Test Wiki : Content &copy <?php date('Y'); ?> the authors.</p>
     </footer>
 
   </div>
