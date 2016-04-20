@@ -41,6 +41,7 @@
 $route['test'] = "Test";
 $route['pages'] = 'page';
 $route['page/add'] = 'page/add';
+$route['page/add/(:any)'] = 'page/add/$1';
 $route['page/(:any)/edit'] = 'page/edit/$1';
 $route['page/(:any)/delete'] = 'page/delete/$1';
 $route['(:any)'] = 'page/view/$1';
